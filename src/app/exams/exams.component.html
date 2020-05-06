@@ -27,6 +27,7 @@
     left: 0;
     right: 0;
     top: 100px;
+    display: none;
   }
 
   button.okay{
@@ -59,40 +60,40 @@
       <td class="pt-2">Completed</td>
       <td class="pt-2">80%</td>
       <td class="pt-2">Pass</td>
-      <td class="pt-2"><button type="button" onclick="alert('')">Start Exam</button></td>
+      <td class="pt-2"><button type="button" (click)="open_pop_up($event)">Start Exam</button></td>
     </tr>
     <tr>
       <td>PPL - Meteorology</td>
       <td>Completed</td>
       <td>60%</td>
       <td>Fail</td>
-      <td><button type="button" onclick="alert('')">Retake Exam</button></td>
+      <td><button type="button" (click)="open_pop_up($event)">Retake Exam</button></td>
     </tr>
     <tr>
       <td>PPL- Principles of Flight</td>
       <td>Completed</td>
       <td>80%</td>
       <td>Pass</td>
-      <td><button type="button" onclick="alert('')">Start Exam</button></td>
+      <td><button type="button" (click)="open_pop_up($event)">Start Exam</button></td>
     </tr>
     <tr>
       <td>PPL- Principles of Flight</td>
       <td>Completed</td>
       <td>80%</td>
       <td>Pass</td>
-      <td><button type="button" onclick="alert('')">Start Exam</button></td>
+      <td><button type="button" (click)="open_pop_up($event)">Start Exam</button></td>
     </tr>
     <tr>
       <td>PPL - Meteorology</td>
       <td>Completed</td>
       <td>60%</td>
       <td>Fail</td>
-      <td><button type="button" onclick="alert('')">Retake Exam</button></td>
+      <td><button type="button" (click)="open_pop_up($event)">Retake Exam</button></td>
     </tr>
   </table>
 </div>
 
-<div class="container shadow-lg bg-white p-4 w-75 pop-up">
+<div class="container shadow-lg bg-white p-4 w-75 pop-up" id="pop-up">
   <h4 class="pb-3">Meteorology<div class="float-right font-small">Time Remaining<br>00:45:36</div></h4>
   <p>1. Relative humidity dependent upon?</p>
   <div class="pl-3">
@@ -106,6 +107,6 @@
   <label class="pl-2"  for="">Temperature and pressure</label><br><br>
     <button class="next" type="button" onclick="alert('')">Next <i class="fa fa-arrow-right pl-2" aria-hidden="true"></i></button>
   </div>
-  <button class="okay float-right mt-5" type="button" onclick="alert('')">Okay</button>
+  <button class="okay float-right mt-5" type="button" (click)="close_pop_up($event)">Okay</button>
 </div>
 
