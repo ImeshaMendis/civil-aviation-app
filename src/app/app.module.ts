@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LicensingComponent } from './licensing/licensing.component';
 import { ExamsComponent } from './exams/exams.component';
+import { SidePanelComponent } from './side-panel/side-panel.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LicensingComponent,
-    ExamsComponent
+    ExamsComponent,
+    SidePanelComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
