@@ -3,6 +3,10 @@
     color: #03bcd2;
   }
 
+  .font-small{
+    font-size: 14px !important;
+  }
+
   .container{
     margin-top: 5%;
   }
@@ -14,6 +18,30 @@
     color: white;
     border: none;
     width: 100px;
+  }
+
+  .container.pop-up{
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 100px;
+  }
+
+  button.okay{
+    height: 30px;
+    width: 100px;
+    font-size: 14px;
+  }
+
+  button.next{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+    width: 100px;
+    font-size: 14px;
   }
 </style>
 
@@ -62,5 +90,22 @@
       <td><button type="button" onclick="alert('')">Retake Exam</button></td>
     </tr>
   </table>
+</div>
+
+<div class="container shadow-lg bg-white p-4 w-75 pop-up">
+  <h4 class="pb-3">Meteorology<div class="float-right font-small">Time Remaining<br>00:45:36</div></h4>
+  <p>1 is relative humidity dependent upon?</p>
+  <div class="pl-3">
+  <input type="radio" id="" name="gender" value="male">
+  <label class="pl-2" for="">Moisture content and the temperature of the air</label><br>
+  <input type="radio" id="" name="gender" value="female">
+  <label class="pl-2"  for="">Temperature of the air</label><br>
+  <input type="radio" id="" name="gender" value="other">
+  <label class="pl-2"  for="">Moisture content of the air</label><br>
+  <input type="radio" id="" name="gender" value="other">
+  <label class="pl-2"  for="">Temperature and pressure</label><br><br>
+    <button class="next" type="button" onclick="alert('')">Next <i class="fa fa-arrow-right pl-2" aria-hidden="true"></i></button>
+  </div>
+  <button class="okay float-right mt-5" type="button" onclick="alert('')">Okay</button>
 </div>
 
