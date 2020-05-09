@@ -28,8 +28,9 @@ export class ExamsComponent implements OnInit {
     this.startTimer();
   }
   close_pop_up2(event:any) {
-    this.marks = '100';
+    this.marks = '100%';
     this.results = 'Pass';
+    this.status = 'Completed';
     this.added = false;
     document.getElementById("pop-up2").style.display = "none";
   }
