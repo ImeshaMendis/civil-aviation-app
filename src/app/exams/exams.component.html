@@ -1,17 +1,17 @@
 <style>
-  .color-blue{
+  .color-blue {
     color: #03bcd2;
   }
 
-  .font-small{
+  .font-small {
     font-size: 14px !important;
   }
 
-  .container{
+  .container {
     margin-top: 5%;
   }
 
-  button{
+  button {
     height: 22px;
     font-size: 12px;
     background-color: #03bcd2;
@@ -20,7 +20,7 @@
     width: 100px;
   }
 
-  .container.pop-up{
+  .container.pop-up {
     position: absolute;
     margin-left: auto;
     margin-right: auto;
@@ -28,15 +28,27 @@
     right: 0;
     top: 100px;
     display: none;
+
   }
 
-  button.okay{
+  .container.pop-up2 {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 100px;
+    display: none;
+
+  }
+
+  button.okay {
     height: 30px;
     width: 100px;
     font-size: 14px;
   }
 
-  button.next{
+  button.next {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -94,27 +106,29 @@
 </div>
 
 <div class="container shadow-lg bg-white p-4 w-75 pop-up" id="pop-up">
-  <h4 class="pb-3">Meteorology<div class="float-right font-small">Time Remaining<br>00:45:36</div></h4>
+  <h4 class="pb-3">Meteorology<div class="float-right font-small">Time Remaining<br>00:45:{{remainingSec}}</div>
+  </h4>
   <p>1. Relative humidity dependent upon?</p>
   <div class="pl-3">
-  <input type="radio" id="" name="gender" value="male">
-  <label class="pl-2" for="">Moisture content and the temperature of the air</label><br>
-  <input type="radio" id="" name="gender" value="female">
-  <label class="pl-2"  for="">Temperature of the air</label><br>
-  <input type="radio" id="" name="gender" value="other">
-  <label class="pl-2"  for="">Moisture content of the air</label><br>
-  <input type="radio" id="" name="gender" value="other">
-  <label class="pl-2"  for="">Temperature and pressure</label><br><br>
-    <button class="next" type="button" onclick="alert('')">Next <i class="fa fa-arrow-right pl-2" aria-hidden="true"></i></button>
+    <input type="radio" id="" name="gender" value="male">
+    <label class="pl-2" for="">Moisture content and the temperature of the air</label><br>
+    <input type="radio" id="" name="gender" value="female">
+    <label class="pl-2" for="">Temperature of the air</label><br>
+    <input type="radio" id="" name="gender" value="other">
+    <label class="pl-2" for="">Moisture content of the air</label><br>
+    <input type="radio" id="" name="gender" value="other">
+    <label class="pl-2" for="">Temperature and pressure</label><br><br>
+    <button class="next" type="button" onclick="alert('')">Next <i class="fa fa-arrow-right pl-2"
+        aria-hidden="true"></i></button>
   </div>
   <button class="okay float-right mt-5" type="button" (click)="close_pop_up($event)">Okay</button>
 </div>
 
-<div class="container shadow-lg bg-white p-4 w-75 pop-up">
-  <h4 class="pb-3">Meteorology<div class="float-right font-small">Time Remaining<br>00:45:36</div></h4>
+<div class="container shadow-lg bg-white p-4 w-75 pop-up2" id="pop-up2">
+  <h4 class="pb-3">Meteorology<div class="float-right font-small">Time Remaining<br>00:45:36</div>
+  </h4>
   <p><b>Congratulations You have passed the exam!</b><br>
-    You have got 25 questions correct from the 30 questions.<br>
-    Your score is 83%</p>
-  <button class="okay float-right mt-5" type="button" onclick="alert('')">Okay</button>
+    You have got 1 questions correct from the 1 questions.<br>
+    Your score is 100%</p>
+  <button class="okay float-right mt-5" type="button" (click)="close_pop_up2($event)">Okay</button>
 </div>
-
