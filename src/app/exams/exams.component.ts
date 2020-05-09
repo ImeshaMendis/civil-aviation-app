@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExamsComponent implements OnInit {
   added : boolean;
+  marks = '';
+  results = '';
+  status = 'Pending';
   remainingMins: number = 45;
   remainingSec: number = 59;
   interval;
@@ -25,6 +28,8 @@ export class ExamsComponent implements OnInit {
     this.startTimer();
   }
   close_pop_up2(event:any) {
+    this.marks = '100';
+    this.results = 'Pass';
     this.added = false;
     document.getElementById("pop-up2").style.display = "none";
   }

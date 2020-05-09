@@ -69,9 +69,9 @@
     </tr>
     <tr>
       <td class="pt-2">PPL- Principles of Flight</td>
-      <td class="pt-2">Completed</td>
-      <td class="pt-2">80%</td>
-      <td class="pt-2">Pass</td>
+      <td class="pt-2">{{status}}</td>
+      <td class="pt-2">{{marks}}</td>
+      <td class="pt-2">{{results}}</td>
       <td class="pt-2"><button type="button" (click)="open_pop_up($event)">Start Exam</button></td>
     </tr>
     <tr>
@@ -125,7 +125,7 @@
 </div>
 
 <div class="container shadow-lg bg-white p-4 w-75 pop-up2" id="pop-up2">
-  <h4 class="pb-3">Meteorology<div class="float-right font-small">Time Remaining<br>00:45:36</div>
+  <h4 class="pb-3">Meteorology<div class="float-right font-small">Time Remaining<br>00:45:{{remainingSec}}</div>
   </h4>
   <p><b>Congratulations You have passed the exam!</b><br>
     You have got 1 questions correct from the 1 questions.<br>
